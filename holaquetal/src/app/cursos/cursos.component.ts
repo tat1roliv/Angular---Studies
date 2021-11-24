@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CursosService } from './cursos.service';
+
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
@@ -10,10 +12,11 @@ export class CursosComponent implements OnInit {
   nomePortal: string;//tipando a variavel (ts)
   //nomePortal: any;//tipagem generica (ts)
 
-  cursos: string[] = [ 'Java', 'Angular', 'Typescript']
+  cursos: string[];
 
-  constructor() {
+  constructor(private cursosService: CursosService) {
     this.nomePortal = "http://www.tatioliv.live/";
+    this.cursos = this.cursosService.getCursos();
 
     /*ngFor*/
     /*
@@ -21,6 +24,8 @@ export class CursosComponent implements OnInit {
       let curso = this.cursos[i];
     }
     */
+
+    var servico = new CursosService();
 
   }
 
