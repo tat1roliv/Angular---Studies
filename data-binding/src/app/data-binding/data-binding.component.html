@@ -1,6 +1,7 @@
 <section class="property-binding">
+<!--<section class="property-binding">
 
-  <!--<article>
+ <article>
 
     <h3>Interpolação</h3>
 
@@ -21,7 +22,7 @@
     <p>property binding por baixo está atribuindo o bind-src</p>
     <img bind-src = "urlImagem">
 
-  </article>-->
+  </article>
 
   <article>
     <h3>Class e Style Binding</h3>
@@ -29,8 +30,8 @@
     <div>
       Selecione uma classe:
 
-      <select #classe (change)="0"> <!-- event binding / variavel local de template -->
-        <option value="alert-success">Sucesso</option>
+      <select #classe (change)="0">--> <!-- event binding / variavel local de template -->
+        <!--<option value="alert-success">Sucesso</option>
         <option value="alert-info">Info</option>
         <option value="alert-warning">Alerta</option>
         <option value="alert-danger">Erro</option>
@@ -71,4 +72,37 @@
   </article>
 
 
+</section>-->
+
+<section class="event-binding">
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button (click)="botaoClicado()"
+      class="btn btn-primary">Clique aqui</button>
+
+      <br><br>
+
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor(campoInput.value)"
+      (blur)="salvarValor(campoInput.value)"
+      #campoInput />
+
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+
+      <br><br>
+
+      <span
+      (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()"
+      [class.highlight]="isMouseOver">
+      Passe o mouse aqui</span>
+
+    </div>
+  </article>
 </section>
+
+
+
