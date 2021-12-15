@@ -109,26 +109,18 @@
   <article>
     <h3>Two-way data binding</h3>
 
-
     <div>
-      <!--
+
       <input type="text"
-      [ value ]="nome"
-      ( input )="nome= $event.target"
+      [value]="nome"
       />
 
+      <p>Você digitou: {{ nome }} </p>
       <br>
 
       <input type="text"
-      ( ngModelChange )="nome=$event"
-      />
-
-      <br>-->
-
-      <label>Digite: </label>
-        <input type="text" [( ngModel )] ="nome">
-      <br>
-
+      [(ngModel)]="nome"
+      >
       <p>Você digitou: {{ nome }} </p>
 
     </div>
