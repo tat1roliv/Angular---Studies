@@ -119,9 +119,33 @@
       <br>
 
       <input type="text"
+      [ngModel]="nome"
+      (ngModelChange)="nome=$event"
+      >
+      <p>Você digitou: {{ nome }} </p>
+      <br>
+
+      <input type="text"
       [(ngModel)]="nome"
       >
       <p>Você digitou: {{ nome }} </p>
+
+      <div>
+        <p>Objeto pessoa</p>
+
+        <input type="text"
+        [(ngModel)]="pessoa.nome"
+        />
+        <input type="text"
+        [(ngModel)]="pessoa.idade"
+        />
+
+        <p>Objeto pessoa: nome=>  {{ pessoa.nome }} idade=> {{ pessoa.idade }} </p>
+
+      </div>
+
+
+
 
     </div>
 
