@@ -12,6 +12,8 @@ export class DataBindingComponent implements OnInit {
   urlImagem: any = "https://i.picsum.photos/id/1052/400/200.jpg?hmac=f6mzeHv1XldEfKvQRGstGvtuPgGxuUhIWPyMpIBRR8k";
 
 
+  nomeDoCurso: string = 'Angular';
+
   valorAtual: string = '';
   valorSalvo: string = '';
 
