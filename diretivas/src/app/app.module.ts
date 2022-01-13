@@ -3,10 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { AppComponent } from './app.component';
+/*import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';*/
+
 import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 import { TesteComponentComponent } from './teste-component/teste-component.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,13 @@ import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.componen
     DiretivaNgifComponent,
     TesteComponentComponent,
     NgSwitchComponent,
-    DiretivaNgforComponent
+    DiretivaNgforComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   /* FontAwesomeModule*/
   ],
   providers: [],
   bootstrap: [AppComponent]
