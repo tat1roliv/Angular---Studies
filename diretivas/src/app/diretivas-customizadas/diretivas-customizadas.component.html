@@ -4,3 +4,15 @@
 <p appHighlightMouse>texto mouse</p>
 
 <p appHighlight [defaultColor]="'grey'" [highlightColor]="'red'">texto com cores customizadas</p>
+
+<p>ng-else</p>
+
+<div *ngIf="mostrarCursos">
+  lista de cursos aqui.
+</div>
+
+<div *ngElse="mostrarCursos">
+  não existem cursos para serem listados.
+</div>
+
+<button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
