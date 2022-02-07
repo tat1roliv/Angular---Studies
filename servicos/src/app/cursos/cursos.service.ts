@@ -1,7 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({ providedIn: "root" })
+
 export class CursosService {
+
+  emitirCursoCriado = new EventEmitter<string>();
+  static criouNovoCurso = new EventEmitter<string>();//nao precisa da instancia da classe p acessar (static)
 
   private cursos: string[] = ['angular', 'java', '.net'];
 
@@ -13,8 +17,10 @@ export class CursosService {
     return this.cursos;
   }
 
-  onAddCurso(curso: string){
+  AddCurso(curso: string){
     this.cursos.push(curso);
+    this.emitirCursoCriado.emit(curso);
+    CursosService.criouNovoCurso.emit(curso);
   }
 
 }
