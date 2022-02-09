@@ -1,0 +1,14 @@
+<p>exemplos-pipes works!</p>
+
+<p>titulo: {{ livro.titulo | uppercase }}</p>
+<p>titulo: {{ livro.titulo | uppercase | lowercase }}</p><!--pipes aninhado-->
+<p>rating: {{ livro.rating | number:'2.2' }}</p><!--duas casas antes da virgula, duas depois-->
+<p>numeroPaginas: {{ livro.numeroPaginas | number }}</p>
+<p>preco: {{ livro.preco | currency:'BRL' }}</p><!--mudando argumento de USD para BR-->
+<p>dataLancamento: {{ livro.dataLancamento | date}}</p>
+<p>dataLancamento: {{ livro.dataLancamento | date:'short'}}</p>
+<p>dataLancamento: {{ livro.dataLancamento | date:'dd-MM-yyyy'}}</p>
+<p>dataLancamento: {{ livro.dataLancamento | date:'dd-MMM-yyyy'}}</p>
+<p>url: {{ livro.url}}</p>
+
+<p>livro {{ livro | json }}</p>
