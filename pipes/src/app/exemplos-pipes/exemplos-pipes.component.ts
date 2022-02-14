@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-exemplos-pipes',
   templateUrl: './exemplos-pipes.component.html',
-  styleUrls: ['./exemplos-pipes.component.css']
+  styleUrls: ['./exemplos-pipes.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExemplosPipesComponent implements OnInit {
+
+  
 
   livro: any = {
     titulo: 'Estruturas de dados e algoritmos com JavaScript',
@@ -15,6 +18,15 @@ export class ExemplosPipesComponent implements OnInit {
     dataLancamento: new Date(2016, 5, 23),//indice do mes comeca em 0, mes 6 = 5
     url: 'https://loiane.training/continuar-curso/angular'
   };
+
+
+  livros: string[] = ['java', 'angular'];
+
+  filtro: string = '';
+
+  addCurso(valor: any){
+    this.livros.push(valor);
+  }
 
   constructor() { }
 

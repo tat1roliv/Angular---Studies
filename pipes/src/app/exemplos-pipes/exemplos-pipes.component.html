@@ -2,13 +2,29 @@
 
 <p>titulo: {{ livro.titulo | uppercase | camelCase}}</p>
 <p>titulo: {{ livro.titulo | uppercase | lowercase }}</p><!--pipes aninhado-->
-<p>rating: {{ livro.rating | number:'2.2' }}</p><!--duas casas antes da virgula, duas depois-->
-<p>numeroPaginas: {{ livro.numeroPaginas | number }}</p>
-<p>preco: {{ livro.preco | currency:'BRL' }}</p><!--mudando argumento de USD para BR-->
-<p>dataLancamento: {{ livro.dataLancamento | date}}</p>
+<p>rating: {{ livro.rating }}</p><!--duas casas antes da virgula, duas depois-->
+<!--<p>rating: {{ livro.rating | number:'2.2' }}</p>--><!--duas casas antes da virgula, duas depois-->
+<p>numeroPaginas: {{ livro.numeroPaginas }}</p>
+<!--<p>numeroPaginas: {{ livro.numeroPaginas | number }}</p>-->
+<p>preco: {{ livro.preco }}</p><!--mudando argumento de USD para BR-->
+<!--<p>preco: {{ livro.preco | currency:'BRL' }}</p>--><!--mudando argumento de USD para BR-->
+<p>dataLancamento: {{ livro.dataLancamento }}</p>
+<!--<p>dataLancamento: {{ livro.dataLancamento | date}}</p>
 <p>dataLancamento: {{ livro.dataLancamento | date:'short'}}</p>
 <p>dataLancamento: {{ livro.dataLancamento | date:'dd-MM-yyyy'}}</p>
-<p>dataLancamento: {{ livro.dataLancamento | date:'dd-MMM-yyyy'}}</p>
-<p>url: {{ livro.url}}</p>
+<p>dataLancamento: {{ livro.dataLancamento | date:'dd-MMM-yyyy'}}</p>-->
+<p>url: {{ livro.url }}</p>
 
 <p>livro {{ livro | json }}</p>
+
+<input type="text" [(ngModel)]="filtro">
+<br>
+<input type="text" #novoValor>
+<button (click)="addCurso(novoValor.value)" >add curso</button>
+
+
+<ul>
+  <li *ngFor="let liv of livros | filtroArray:filtro">
+   {{ liv }}
+  </li>
+ </ul>
