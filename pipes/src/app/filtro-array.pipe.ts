@@ -18,7 +18,7 @@ export class FiltroArrayPipe implements PipeTransform {
     const filter = args.toLocaleString().toLocaleLowerCase();
 
     return value.filter(
-      (v: any) => v.toLocaleLowerCase().includes(filter)
+      (v: any) => v.toLocaleLowerCase().includes(filter) != -1
     );
 
 

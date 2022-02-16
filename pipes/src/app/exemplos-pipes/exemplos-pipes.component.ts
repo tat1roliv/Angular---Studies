@@ -8,7 +8,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class ExemplosPipesComponent implements OnInit {
 
-  
+
 
   livro: any = {
     titulo: 'Estruturas de dados e algoritmos com JavaScript',
@@ -24,8 +24,9 @@ export class ExemplosPipesComponent implements OnInit {
 
   filtro: string = '';
 
-  addCurso(valor: any){
+  addCurso(valor: string){
     this.livros.push(valor);
+    console.log(this.livros);
   }
 
   constructor() { }
