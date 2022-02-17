@@ -22,9 +22,27 @@
 <input type="text" #novoValor>
 <button (click)="addCurso(novoValor.value)" >add curso</button>
 
+<p>pipe puro</p>
 
 <ul>
   <li *ngFor="let liv of livros | filtroArray:filtro">
    {{ liv }}
   </li>
  </ul>
+
+ <p>pipe impuro</p>
+
+<ul>
+  <li *ngFor="let liv of livros | filtroArray:filtro">
+   {{ liv }}
+  </li>
+</ul>
+
+
+<p>usando filtros em projetos(como deveria ser)</p>
+
+<ul>
+  <li *ngFor="let liv of obterCursos()">
+   {{ liv }}
+  </li>
+</ul>
