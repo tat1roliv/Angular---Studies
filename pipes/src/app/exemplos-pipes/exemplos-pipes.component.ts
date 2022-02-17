@@ -1,5 +1,9 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
+//import { Observable } from 'rxjs/Observable';
+import { interval } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-exemplos-pipes',
   templateUrl: './exemplos-pipes.component.html',
@@ -43,9 +47,22 @@ export class ExemplosPipesComponent implements OnInit {
       });
   }
 
+
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('valor asincrono'),
+      2000
+    })
+  });
+
+
+  valorAsync2 = interval(2000).pipe(map(valor => 'valor asincrono 2 teste observable'));
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }
