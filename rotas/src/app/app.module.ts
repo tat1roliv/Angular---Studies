@@ -9,15 +9,21 @@ import { MatSliderModule } from '@angular/material/slider';
 
 import {MatButtonModule} from '@angular/material/button';
 import { BotaoTesteComponent } from './botao-teste/botao-teste.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { CursosComponent } from './cursos/cursos.component';
 
-
+import { routing } from './app.routing';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BotaoTesteComponent
+    BotaoTesteComponent,
+    HomeComponent,
+    LoginComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +31,7 @@ import { BotaoTesteComponent } from './botao-teste/botao-teste.component';
     BrowserAnimationsModule,
     MatSliderModule,
     MatButtonModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
