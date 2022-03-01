@@ -1,1 +1,6 @@
-<p>cursos works!</p>
+<p>cursos component</p>
+
+<div class="list-group">
+  <a class="list-group-item" *ngFor="let curso of cursos" [routerLink]="['/curso', curso.id]">{{curso.nome}}</a>
+
+</div>
