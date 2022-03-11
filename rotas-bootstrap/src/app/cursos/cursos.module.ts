@@ -2,7 +2,8 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 
-import { RouterModule } from "@angular/router";
+//import { RouterModule } from "@angular/router";
+import { CursosRoutingModule } from "./cursos.routing.module";
 
 import { CursosComponent } from "./cursos.component";
 import { CursoDetalheComponent } from "./curso-detalhe/curso-detalhe.component";
@@ -14,7 +15,8 @@ import { CursosService } from "./cursos.service";
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    CursosRoutingModule
+    //RouterModule
   ],
   exports: [],
   declarations: [
