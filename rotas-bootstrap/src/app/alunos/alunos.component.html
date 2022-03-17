@@ -1,2 +1,12 @@
-<p>alunos works!</p>
+<p>lista alunos</p>
+
+<div class="container">
+
+  <ul class="list-group">
+    <a class="list-group-item"
+    *ngFor="let aluno of alunos"
+    [routerLink]="[aluno.id]"
+    >{{aluno.nome}}</a>
+  </ul>
+</div>
 <router-outlet></router-outlet>

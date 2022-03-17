@@ -5,17 +5,16 @@
       <li class="nav-item navbar-brand" routerLinkActive="active"><a class="nav-link " routerLink="">Home</a></li>
       <li class="nav-item navbar-brand" routerLinkActive="active"><a class=" nav-link" routerLink="/login">Login</a></li>
       <li class="nav-item navbar-brand" routerLinkActive="active"><a class="nav-link " routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a></li>
-
       <li class="nav-item navbar-brand" routerLinkActive="active"><a class="nav-link " routerLink="/alunos" >Alunos</a></li>
 
-      <li class="nav-item navbar-brand" routerLinkActive="active"><a class="nav-link " [routerLink] = "['curso', idCurso.value]">Curso com Id</a></li>
+      <!--li class="nav-item navbar-brand" routerLinkActive="active"><a class="nav-link " [routerLink] = "['curso', idCurso.value]">Curso com Id</a></!--li-->
     </ul>
   </div>
 </nav>
 
 <div class="container">
-  <p>entre com o id do curso</p>
-  <input #idCurso>
+  <!--p>entre com o id do curso</!--p-->
+  <!--input #idCurso-->
   <router-outlet></router-outlet>
 </div>
 
