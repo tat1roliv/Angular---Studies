@@ -1,3 +1,4 @@
+
 import { AlunosModule } from './../alunos.module';
 import { AlunosService } from './../alunos.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -13,12 +14,12 @@ import { Aluno } from './../aluno';
 export class AlunoDetalheComponent implements OnInit, OnDestroy {
 
   aluno: Aluno;
-  inscricao: Subscription;
+  inscricao: Subscription = new Subscription;
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private alunosService: AlunosService
+    public route: ActivatedRoute,
+    public router: Router,
+    public alunosService: AlunosService
   ) { }
 
   ngOnInit() {
